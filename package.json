@@ -1,0 +1,14 @@
+{
+  "name": "firefoxstartingpage",
+  "version": "1.0.0",
+  "description": "Small project for creating a Firefox Starting Page",
+  "main": "unsplashAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^1.9.6"
+  }
+}
