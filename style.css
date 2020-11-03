@@ -6,7 +6,7 @@
 
 
 .card {
-    @apply rounded-lg bg-white text-black p-8 bg-opacity-50 shadow-lg;
+    @apply rounded-lg bg-white text-black p-8 bg-opacity-50 shadow-lg max-w-sm min-w-15;
 }
 
 .heading {
@@ -24,4 +24,8 @@
 
 .link div {
     @apply underline;
+}
+
+.search-link {
+    @apply w-8 h-8 rounded-full bg-white bg-opacity-75 flex items-center justify-center shadow;
 }

@@ -11841,12 +11841,16 @@ video {
   min-height: 100vh;
 }
 
-.min-w-0 {
-  min-width: 0;
+.min-w-15 {
+  min-width: 15rem;
 }
 
-.min-w-full {
-  min-width: 100%;
+.min-w-1-5 {
+  min-width: 20%;
+}
+
+.min-w-3-5 {
+  min-width: 60%;
 }
 
 .object-contain {
@@ -21641,6 +21645,8 @@ video {
   padding: 2rem;
   --bg-opacity: 0.5;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 24rem;
+  min-width: 15rem;
 }
 
 .heading {
@@ -21664,6 +21670,20 @@ video {
 
 .link div {
   text-decoration: underline;
+}
+
+.search-link {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --bg-opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 @media (min-width: 640px) {
@@ -32922,12 +32942,16 @@ video {
     min-height: 100vh;
   }
 
-  .sm\:min-w-0 {
-    min-width: 0;
+  .sm\:min-w-15 {
+    min-width: 15rem;
   }
 
-  .sm\:min-w-full {
-    min-width: 100%;
+  .sm\:min-w-1-5 {
+    min-width: 20%;
+  }
+
+  .sm\:min-w-3-5 {
+    min-width: 60%;
   }
 
   .sm\:object-contain {
@@ -53902,12 +53926,16 @@ video {
     min-height: 100vh;
   }
 
-  .md\:min-w-0 {
-    min-width: 0;
+  .md\:min-w-15 {
+    min-width: 15rem;
   }
 
-  .md\:min-w-full {
-    min-width: 100%;
+  .md\:min-w-1-5 {
+    min-width: 20%;
+  }
+
+  .md\:min-w-3-5 {
+    min-width: 60%;
   }
 
   .md\:object-contain {
@@ -74882,12 +74910,16 @@ video {
     min-height: 100vh;
   }
 
-  .lg\:min-w-0 {
-    min-width: 0;
+  .lg\:min-w-15 {
+    min-width: 15rem;
   }
 
-  .lg\:min-w-full {
-    min-width: 100%;
+  .lg\:min-w-1-5 {
+    min-width: 20%;
+  }
+
+  .lg\:min-w-3-5 {
+    min-width: 60%;
   }
 
   .lg\:object-contain {
@@ -95862,12 +95894,16 @@ video {
     min-height: 100vh;
   }
 
-  .xl\:min-w-0 {
-    min-width: 0;
+  .xl\:min-w-15 {
+    min-width: 15rem;
   }
 
-  .xl\:min-w-full {
-    min-width: 100%;
+  .xl\:min-w-1-5 {
+    min-width: 20%;
+  }
+
+  .xl\:min-w-3-5 {
+    min-width: 60%;
   }
 
   .xl\:object-contain {

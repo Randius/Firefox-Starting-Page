@@ -3,13 +3,14 @@
     <head>
         <link rel="stylesheet" href="output.css">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a5ff699286.js" crossorigin="anonymous"></script>
     </head>
     <body>
         
-        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-24" style="background-image: url('testImage2.jpg');">
+        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-24 justify-center" style="background-image: url('testImage2.jpg');">
             
             <div id="linksAndSearch" class="card row-span-2">
-                <h2 class="heading">Links</h2>
+                <h2 class="heading mb-4"><i class="fas fa-link fa-xs mr-2"></i>Links</h2>
                 <div class="flex flex-col">
                     <a href="https://www.youtube.de" class="link">
                         <img src="logos/yt_icon_rgb.png" class="" />
@@ -45,28 +46,35 @@
                     </a>
                 </div>
                 <div>
-                    <input type="search" />
-                    <div>
-                        <button></button>
+                    <div class="mt-16 mb-4">
+                        <i class="fas fa-search inline w-1/12"></i><input type="search" class="w-11/12 bg-transparent border-b-2 border-solid border-black border-opacity-50 text-center"/>
+                    </div>
+                        <div class="flex justify-evenly">
+                        <a href="#" class="search-link border-solid border-red-500 border-2"><i class="fab fa-google"></i></a>
+                        <a href="#" class="search-link"><i class="fab fa-reddit"></i></a>
+                        <a href="#" class="search-link"><i class="fab fa-youtube"></i></button>
+                        <a href="#" class="search-link"><i class="fab fa-wikipedia-w"></i></i></a>
+                        <a href="#" class="search-link"><i class="fab fa-amazon"></i></a>
+                        <a href="#" class="search-link"><i class="fab fa-stack-overflow"></i></a>
                     </div>
                 </div>
             </div>
             <div id="hello" class="flex flex-col justify-center items-center">
-                <h2 class="text-4xl mb-8 font-display">Guten Tag, Marius</h2>
+                <h2 class="text-4xl mb-8 font-display text-center">Guten Tag, Marius</h2>
                 <div id="time" class="text-2xl"></div>
             </div>
             <div id="weatherAndDate" class="card">
-                <h2 class="heading">Wetter</h2>
-                <div id="weather">
-                    <img id="sky" />
-                    <div id="temp"></div>
+                <h2 class="heading"><i class="fas fa-cloud-sun-rain fa-xs mr-2"></i>Wetter</h2>
+                <div id="weather" class="flex flex-col items-center">
+                    <img id="sky" class="w-3-5" />
+                    <div id="temp" class="text-xl -mt-8"></div>
                 </div>
             
             </div>
             
             
             <div id="news" class="card row-span-2 overflow-scroll">
-                <h2 class="heading">News</h2>
+                <h2 class="heading"><i class="fas fa-newspaper fa-xs mr-2"></i>News</h2>
             </div>
         </div>
 
