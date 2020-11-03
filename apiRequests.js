@@ -4,7 +4,7 @@
 var rdmImg;
 
 async function getImages() {
-    const response = await fetch('https://api.unsplash.com/search/photos?client_id=S9WJbyMlMrIOBZ03q-6ndFlmg1BFNO32uVBbJAf8WcA&query=beautiful');
+    const response = await fetch('https://api.unsplash.com/search/photos?client_id=S9WJbyMlMrIOBZ03q-6ndFlmg1BFNO32uVBbJAf8WcA&query=nature');
     const myJson = await response.json(); //extract JSON from the http response
     rdmImg = myJson.results[Math.floor(Math.random() * 10)].urls.full;
     document.getElementById("background").style = "background-image: url(" + rdmImg + ");";
@@ -49,11 +49,15 @@ function getNews () {
                 var divArticle = document.createElement("DIV")
                 var divTitle = document.createElement("DIV");
                 var divDescr = document.createElement("DIV");
-                divDescr.className += " text-sm";
+                divTitle.className += " leading-tight text-center font-bold text-sm mt-8";
+                divDescr.className += " text-sm flex items-start mt-2";
                 divTitle.innerHTML = article.title;
                 divDescr.innerHTML = article.description;
+                divDescr.firstChild.className += " w-1/3"
+                divDescr.lastChild.className += " w-2/3 text-xs font-normal leading-tight text-left ml-1"
                 divArticle.appendChild(divTitle).appendChild(divDescr);
                 document.getElementById("news").appendChild(divArticle);
+
             })
         
         });
@@ -68,10 +72,10 @@ function getNews () {
 
 
 getNews();
-/* getWeather(); */
-/* getImages();
-getBackground(); */
-imgSrc = "https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2125&q=80";
+getWeather();
+getImages();
+/* getBackground(); */
+
 
 
 

@@ -6,7 +6,7 @@
 
 
 .card {
-    @apply rounded-lg bg-white text-black p-8 bg-opacity-50 shadow-lg max-w-sm min-w-15;
+    @apply rounded-lg bg-white text-black p-8 bg-opacity-75 shadow-lg max-w-sm min-w-15;
 }
 
 .heading {

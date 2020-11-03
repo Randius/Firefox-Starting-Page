@@ -21643,7 +21643,7 @@ video {
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
   padding: 2rem;
-  --bg-opacity: 0.5;
+  --bg-opacity: 0.75;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   max-width: 24rem;
   min-width: 15rem;
