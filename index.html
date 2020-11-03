@@ -6,42 +6,65 @@
     </head>
     <body>
         
-        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-24" style="background-image: url('testImage.jpg');">
-            <div id="weatherAndDate" class="card row-span-2">
-                <h2 class="heading">Weather</h2>
-            </div>
-            <div id="links" class="card">
+        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-24" style="background-image: url('testImage2.jpg');">
+            
+            <div id="linksAndSearch" class="card row-span-2">
                 <h2 class="heading">Links</h2>
-                <div class="grid grid-rows-2 grid-cols-4 gap-4">
+                <div class="flex flex-col">
                     <a href="https://www.youtube.de" class="link">
                         <img src="logos/yt_icon_rgb.png" class="" />
+                        <div>Youtube</div>
                     </a>
                     <a href="https://www.sueddeutsche.de" class="link">
                         <img src="logos/sz.png" class=""/>
+                        <div>Sueddeutsche Zeitung</div>
                     </a>
                     <a href="https://www.kicker.de" class="link">
                         <img src="logos/kicker.png" class="" />
+                        <div>Kicker</div>
                     </a>
                     <a href="https://goodreads.com" class="link">
                         <img src="logos/goodreads.png" class="" />
+                        <div>Goodreads</div>
                     </a>
                     <a href="https://liquipedia.net/warcraft/Main_Page" class="link">
                         <img src="logos/liquipedia.png" class="" />
+                        <div>Liquipedia</div>
                     </a>
                     <a href="https://www.twitch.tv" class="link">
                         <img src="logos/Twitch-Icon.jpg" class="" />
+                        <div>Twitch</div>
                     </a>
                     <a href="https://www.reddit.com" class="link">
                         <img src="logos/Reddit_Mark_OnDark.png" class="" />
+                        <div>Reddit</div>
                     </a>
                     <a href="https://www.transfermarkt.de" class="link">
                         <img src="logos/tm.jpg" class="" />
+                        <div>Transfermarkt</div>
                     </a>
                 </div>
+                <div>
+                    <input type="search" />
+                    <div>
+                        <button></button>
+                    </div>
+                </div>
             </div>
-            <div id="search" class="card">
-                <h2 class="heading">Search</h2>
+            <div id="hello" class="flex flex-col justify-center items-center">
+                <h2 class="text-4xl mb-8 font-display">Guten Tag, Marius</h2>
+                <div id="time" class="text-2xl"></div>
             </div>
+            <div id="weatherAndDate" class="card">
+                <h2 class="heading">Wetter</h2>
+                <div id="weather">
+                    <img id="sky" />
+                    <div id="temp"></div>
+                </div>
+            
+            </div>
+            
+            
             <div id="news" class="card row-span-2 overflow-scroll">
                 <h2 class="heading">News</h2>
             </div>
@@ -54,5 +77,6 @@
 
 
     <script src="apiRequests.js"></script>
+    <script src="script.js"></script>
 
 </html>
