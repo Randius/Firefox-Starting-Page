@@ -3,13 +3,15 @@
     <head>
         <link rel="stylesheet" href="output.css">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <script src="https://kit.fontawesome.com/a5ff699286.js" crossorigin="anonymous"></script>
     </head>
     <body>
         
-        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover bg-center grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-24 justify-center" style="background-image: url('testImage2.jpg');">
+        <div id="background" class="w-full fixed bottom-0 top-0 bg-cover bg-center lg:grid grid-rows-2 grid-cols-3 grid-flow-col gap-24 p-6 lg:p-24 justify-center overflow-y-scroll lg:overflow-y-auto" style="background-image: url('testImage2.jpg');">
             
-            <div id="linksAndSearch" class="card row-span-2">
+            <div id="linksAndSearch" class="card mb-8 lg:mb-0 lg:max-w-sm row-span-2 flex flex-col justify-between">
                 <h2 class="heading mb-4"><i class="fas fa-link fa-xs mr-2"></i>Links</h2>
                 <div class="flex flex-col">
                     <a href="https://www.youtube.de" class="link">
@@ -47,23 +49,23 @@
                 </div>
                 <div>
                     <div class="mt-16 mb-4">
-                        <i class="fas fa-search inline w-1/12"></i><input type="search" class="w-11/12 bg-transparent border-b-2 border-solid border-black border-opacity-50 text-center"/>
+                        <i class="fas fa-search inline w-1/12"></i><input id="query" type="search" class="w-11/12 bg-transparent border-b-2 border-solid border-black border-opacity-50 text-center"/>
                     </div>
-                        <div class="flex justify-evenly">
-                        <button id="google" href="#" class="search-link border-solid border-red-500 border-2"><i class="fab fa-google"></i></button>
-                        <button id="reddit" href="#" class="search-link"><i class="fab fa-reddit"></i></button>
-                        <button id="youtube" href="#" class="search-link"><i class="fab fa-youtube"></i></button>
-                        <button id="wikipedia" href="#" class="search-link"><i class="fab fa-wikipedia-w"></i></i></button>
-                        <button id="amazon" href="#" class="search-link"><i class="fab fa-amazon"></i></button>
-                        <button id="stack-overflow" href="#" class="search-link"><i class="fab fa-stack-overflow"></i></button>
+                        <div class="flex justify-evenly mb-8">
+                        <button id="google" class="search-link border-solid border-red-500 border-2"><i class="fab fa-google"></i></button>
+                        <button id="reddit" class="search-link"><i class="fab fa-reddit"></i></button>
+                        <button id="youtube" class="search-link"><i class="fab fa-youtube"></i></button>
+                        <button id="wikipedia" class="search-link"><i class="fab fa-wikipedia-w"></i></i></button>
+                        <button id="amazon" class="search-link"><i class="fab fa-amazon"></i></button>
+                        <button id="stack-overflow" class="search-link"><i class="fab fa-stack-overflow"></i></button>
                     </div>
                 </div>
             </div>
-            <div id="hello" class="flex flex-col justify-center items-center">
+            <div id="hello" class="card mb-8 lg:mb-0 lg:max-w-sm bg-transparent text-black flex flex-col justify-center items-center">
                 <h2 class="text-4xl mb-8 font-display text-center">Guten Tag, Marius</h2>
                 <div id="time" class="text-2xl"></div>
             </div>
-            <div id="weatherAndDate" class="card">
+            <div id="weatherAndDate" class="card mb-8 lg:mb-0 lg:max-w-sm">
                 <h2 class="heading"><i class="fas fa-cloud-sun-rain fa-xs mr-2"></i>Wetter</h2>
                 <div id="weather" class="flex flex-col items-center">
                     <img id="sky" class="w-3-5" />
@@ -73,7 +75,7 @@
             </div>
             
             
-            <div id="news" class="card row-span-2 overflow-scroll">
+            <div data-simplebar id="news" class="card mb-8 lg:mb-0 lg:max-w-sm row-span-2 overflow-scroll">
                 <h2 class="heading"><i class="fas fa-newspaper fa-xs mr-2"></i>News</h2>
             </div>
         </div>
