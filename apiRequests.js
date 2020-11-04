@@ -70,8 +70,8 @@ const news = document.getElementById("news");
 document.getElementById("news-refresh").addEventListener("click", function() {
     while (news.childNodes.length > 4) {
         news.removeChild(news.childNodes[4]);
-        getNews();
     }
+    getNews();
 });
 
 getNews();
