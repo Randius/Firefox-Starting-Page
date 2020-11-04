@@ -17,6 +17,14 @@ const wikipedia = document.getElementById("wikipedia");
 const stackOverflow = document.getElementById("stack-overflow");
 const amazon = document.getElementById("amazon");
 
+document.getElementById("query").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      search(google);
+    }
+}); 
+
+
 google.addEventListener("click", function() {
     search(google);
 });

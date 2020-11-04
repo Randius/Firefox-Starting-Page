@@ -23,9 +23,6 @@ async function getWeather() {
     
 }
 
-function getBackground () {
-    
-}
 
 function getNews () {
     const URL = ('https://cors-anywhere.herokuapp.com/https://rss.sueddeutsche.de/rss/Topthemen');
@@ -41,22 +38,22 @@ function getNews () {
             items.forEach(item => {
                 var title = item.children[0].textContent;
                 var description = item.children[1].textContent;
-                var article = {title: title, description: description};
+                var link = item.children[2].textContent;
+                var article = {title: title, description: description, link: link};
                 articles.push(article);
             });
             
             articles.forEach(article => {
-                var divArticle = document.createElement("DIV")
-                var divTitle = document.createElement("DIV");
+                var divTitle = document.createElement("A");
+                divTitle.href = article.link;
                 var divDescr = document.createElement("DIV");
-                divTitle.className += " leading-tight text-center font-bold text-sm mt-8";
+                divTitle.className += " leading-tight text-center font-bold text-black text-sm mt-8 block bg-white bg-opacity-75 -m-4 shadow p-4 rounded-lg";
                 divDescr.className += " text-sm flex items-start mt-2";
                 divTitle.innerHTML = article.title;
                 divDescr.innerHTML = article.description;
                 divDescr.firstChild.className += " w-1/3"
                 divDescr.lastChild.className += " w-2/3 text-xs font-normal leading-tight text-left ml-1"
-                divArticle.appendChild(divTitle).appendChild(divDescr);
-                document.getElementById("news").appendChild(divArticle);
+                document.getElementById("news").appendChild(divTitle).appendChild(divDescr);
 
             })
         
@@ -74,7 +71,7 @@ function getNews () {
 getNews();
 getWeather();
 getImages();
-/* getBackground(); */
+
 
 
 
